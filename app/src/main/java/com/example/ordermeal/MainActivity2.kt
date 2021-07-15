@@ -6,7 +6,6 @@ import android.os.Bundle
 //手動import
 import android.app.Activity
 import android.content.Intent
-import android.os.Bundle
 import android.widget.RadioButton
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main2.*
@@ -34,7 +33,7 @@ class MainActivity2 : AppCompatActivity() {
                 b.putString(
                     "sugar",radioGroup1.findViewById<RadioButton>(
                         radioGroup1.checkedRadioButtonId
-                    )
+                    ).text.toString()
                 )
                 b.putString(
                     "ice",radioGroup2.findViewById<RadioButton>(
@@ -42,7 +41,7 @@ class MainActivity2 : AppCompatActivity() {
                     ).text.toString()
                 )
                 //用Activity.RESULT_OK標記執行狀態並記錄Intent
-                setResult(Activity.RESULT_OK, Intent().putExtra(b))
+                setResult(Activity.RESULT_OK, Intent().putExtras(b))
                 finish()
             }
         }

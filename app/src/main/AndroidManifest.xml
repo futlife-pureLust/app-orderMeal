@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.OrderMeal">
-        <activity android:name=".MainActivity2" android:label="XXXXX-點餐系統"></activity>
+        <activity android:name=".MainActivity3"></activity>
+        <activity
+            android:name=".MainActivity2"
+            android:label="XXXXX-點餐系統" />
         <activity
             android:name=".MainActivity"
             android:label="XXXXX-點餐系統">

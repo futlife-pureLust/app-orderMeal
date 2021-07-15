@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
         //「」「」
       btn_choice.setOnClickListener{
             //透過Intent切換至Main2Activity，並傳遞requestCode
-            startActivityForResult(Intent(this,Main2Activity::class.java),1)
+            startActivityForResult(Intent(this,MainActivity2::class.java),1)
         }
     }
 
@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() {
         val b = data?.extras?: return
         //驗證請求對像與回傳狀態
         if(requestCode==1&&resultCode==Activity.RESULT_OK){
-            tv_meal.text=String.format("飲料： %s\n\n甜度： %s\n\n冰塊： %s\n\n",b.getString("drink"),b.getString("sugar"),b.getString("ice"))
+            tv_meal2.text=String.format("飲料： %s\n\n甜度： %s\n\n冰塊： %s\n\n",b.getString("drink"),b.getString("sugar"),b.getString("ice"))
         }
     }
 }
