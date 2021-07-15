@@ -17,7 +17,7 @@ class MainActivity2 : AppCompatActivity() {
         setContentView(R.layout.activity_main2)
         //接收並顯示呼叫者傳來桌號資料
         intent?.extras?.let{
-            tv_value2.text  = it.getString("key")
+            tv_value2.text  = it.getString("key")//"key")
         }
 
         //第三步：設定Button監聽事件，判斷是否輸入飲料名稱，並讀取RadioGroup數值
